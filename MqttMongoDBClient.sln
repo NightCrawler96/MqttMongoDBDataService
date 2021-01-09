@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttMongoDBClient", "MqttMongoDBClient\MqttMongoDBClient.csproj", "{8F61E702-E69E-4012-AE32-8FF850512EE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F61E702-E69E-4012-AE32-8FF850512EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F61E702-E69E-4012-AE32-8FF850512EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F61E702-E69E-4012-AE32-8FF850512EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F61E702-E69E-4012-AE32-8FF850512EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11701769-D429-40B8-84E5-97E726A0FF34}
+	EndGlobalSection
+EndGlobal
