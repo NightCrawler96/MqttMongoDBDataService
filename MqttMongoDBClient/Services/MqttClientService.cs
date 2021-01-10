@@ -41,7 +41,7 @@ namespace MqttMongoDBClient.Services
         {
             try
             {
-                var message = Encoding.Unicode.GetString(eventArgs.ApplicationMessage.Payload);
+                var message = Encoding.UTF8.GetString(eventArgs.ApplicationMessage.Payload);
                 Log.Information($"Received message: {message}");
             }
             catch(Exception ex)

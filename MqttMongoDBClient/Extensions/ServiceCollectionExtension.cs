@@ -23,7 +23,9 @@ namespace MqttMongoDBClient.Extensions
                     config.GetSection("MqttClientConfig:MqttClientCredentials:ClientLogin").Value,
                     config.GetSection("MqttClientConfig:MqttClientCredentials:ClientPassword").Value
                 )
-                .WithTcpServer(config.GetSection("MqttClientConfig:MqttClientCredentials:BrokerHostUrl").Value)
+                .WithTcpServer(
+                    config.GetSection("MqttClientConfig:MqttClientCredentials:BrokerHostUrl").Value,
+                    config.GetSection("MqttClientConfig:MqttClientCredentials:BrokerHostPort").Get<int>())
                 .WithCleanSession()
                 .Build();
 
