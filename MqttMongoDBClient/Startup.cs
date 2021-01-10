@@ -3,7 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using MqttMongoDBClient.Extensions;
+using MqttMongoDBClient.Models.Configuration;
+using MqttMongoDBClient.Services.Providers;
 
 namespace MqttMongoDBClient
 {
@@ -20,7 +24,15 @@ namespace MqttMongoDBClient
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddBrokerClientCredentials(this.Configuration);
+            services.AddBrokerClientCredentials(Configuration);
+
+            services.Configure<MongoDBClientConfig>(
+                Configuration.GetSection(nameof(MongoDBClientConfig)));
+            services.AddTransient<MongoDBClientConfig>(
+                serviceProvider => serviceProvider.GetRequiredService<IOptions<MongoDBClientConfig>>().Value);
+            services.AddTransient<IMongoClient>(
+                serviceProvider => new MongoClient(serviceProvider.GetService<MongoDBClientConfig>().ConnectionString));
+            services.AddTransient<DHT22Provider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
