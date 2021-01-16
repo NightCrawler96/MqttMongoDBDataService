@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, development ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, development ]
 
 jobs:
 
@@ -17,4 +17,4 @@ jobs:
     - name: LS
       run: ls -R
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build ./MqttMongoDBClient --tag mqttmongodbservice:$(date +%s)
