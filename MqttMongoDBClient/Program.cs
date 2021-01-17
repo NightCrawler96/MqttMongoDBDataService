@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 
-namespace MqttMongoDBDataService
+namespace MqttMongoDBClient
 {
     public class Program
     {

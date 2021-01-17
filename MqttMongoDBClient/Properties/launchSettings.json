@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MqttMongoDBDataService": {
+    "MqttMongoDBClient": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
