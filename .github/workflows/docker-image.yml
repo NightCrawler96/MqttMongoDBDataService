@@ -14,5 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: LS
+      run: ls -R
     - name: Build the Docker image
-      run: docker build ./MqttMongoDBDataService --tag mqtt-mongodb-service:$(date +%s)
+      run: docker build ./MqttMongoDBClient --tag mqttmongodbservice:$(date +%s)
