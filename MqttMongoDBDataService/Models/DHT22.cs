@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MqttMongoDBDataService.Models
+namespace MqttMongoDBClient.Models
 {
     public class DHT22
     {

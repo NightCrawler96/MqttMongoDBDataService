@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master, development ]
+  pull_request:
+    branches: [ master, development ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: LS
+      run: ls -R
+    - name: Build the Docker image
+      run: docker build ./MqttMongoDBClient --tag mqttmongodbservice:$(date +%s)
