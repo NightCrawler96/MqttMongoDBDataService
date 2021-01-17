@@ -5,8 +5,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using MqttMongoDBClient.Models;
-using MqttMongoDBClient.Services.Providers;
+using MqttMongoDBDataService.Models;
+using MqttMongoDBDataService.Services.Providers;
 using MQTTnet;
 using MQTTnet.Client;
 using MQTTnet.Client.Connecting;
@@ -16,7 +16,7 @@ using MQTTnet.Client.Receiving;
 using Newtonsoft.Json;
 using Serilog;
 
-namespace MqttMongoDBClient.Services
+namespace MqttMongoDBDataService.Services
 {
     public class MqttClientService : IMqttClientConnectedHandler,
                                      IMqttClientDisconnectedHandler,

@@ -1,4 +1,4 @@
-﻿namespace MqttMongoDBClient.Services.Providers
+﻿namespace MqttMongoDBDataService.Services.Providers
 {
     public class ClientServiceProvider
     {

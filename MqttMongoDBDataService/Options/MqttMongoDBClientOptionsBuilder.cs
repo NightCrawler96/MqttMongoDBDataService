@@ -1,13 +1,13 @@
 ﻿using MQTTnet.Client.Options;
 using System;
 
-namespace MqttMongoDBClient.Options
+namespace MqttMongoDBDataService.Options
 {
-    public class MqttMongoDBClientOptionsBuilder : MqttClientOptionsBuilder
+    public class MqttMongoDBDataServiceOptionsBuilder : MqttClientOptionsBuilder
     {
         public IServiceProvider Provider { get; }
 
-        public MqttMongoDBClientOptionsBuilder(IServiceProvider provider)
+        public MqttMongoDBDataServiceOptionsBuilder(IServiceProvider provider)
         {
             Provider = provider;
         }
