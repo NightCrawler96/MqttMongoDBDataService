@@ -7,15 +7,15 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["MqttMongoDBClient.csproj", "."]
-RUN dotnet restore "MqttMongoDBClient.csproj"
+COPY ["MqttMongoDBDataService.csproj", "."]
+RUN dotnet restore "MqttMongoDBDataService.csproj"
 COPY . .
-RUN dotnet build "MqttMongoDBClient.csproj" -c Release -o /app/build
+RUN dotnet build "MqttMongoDBDataService.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "MqttMongoDBClient.csproj" -c Release -o /app/publish
+RUN dotnet publish "MqttMongoDBDataService.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "MqttMongoDBClient.dll"]
+ENTRYPOINT ["dotnet", "MqttMongoDBDataService.dll"]
