@@ -1,15 +1,15 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MqttMongoDBClient.Options;
-using MqttMongoDBClient.Services;
-using MqttMongoDBClient.Services.Providers;
+using MqttMongoDBDataService.Options;
+using MqttMongoDBDataService.Services;
+using MqttMongoDBDataService.Services.Providers;
 using MQTTnet;
 using MQTTnet.Client;
 using MQTTnet.Client.Options;
 using System;
 
-namespace MqttMongoDBClient.Extensions
+namespace MqttMongoDBDataService.Extensions
 {
     public static class ServiceCollectionExtension
     {

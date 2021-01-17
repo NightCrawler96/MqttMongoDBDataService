@@ -1,4 +1,4 @@
-﻿namespace MqttMongoDBClient.Models.Configuration
+﻿namespace MqttMongoDBDataService.Models.Configuration
 {
     public class MongoDBClientConfig
     {

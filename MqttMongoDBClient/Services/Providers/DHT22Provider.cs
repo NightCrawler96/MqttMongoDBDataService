@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
-using MqttMongoDBClient.Models;
-using MqttMongoDBClient.Models.Configuration;
+using MqttMongoDBDataService.Models;
+using MqttMongoDBDataService.Models.Configuration;
 using System;
 
-namespace MqttMongoDBClient.Services.Providers
+namespace MqttMongoDBDataService.Services.Providers
 {
     public class DHT22Provider
     {

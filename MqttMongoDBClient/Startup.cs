@@ -5,11 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using MqttMongoDBClient.Extensions;
-using MqttMongoDBClient.Models.Configuration;
-using MqttMongoDBClient.Services.Providers;
+using MqttMongoDBDataService.Extensions;
+using MqttMongoDBDataService.Models.Configuration;
+using MqttMongoDBDataService.Services.Providers;
 
-namespace MqttMongoDBClient
+namespace MqttMongoDBDataService
 {
     public class Startup
     {
